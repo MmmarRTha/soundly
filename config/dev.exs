@@ -1,9 +1,10 @@
 import Config
+config :ash, policies: [show_policy_breakdowns?: true]
 
 # Configure your database
 config :tunez, Tunez.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "backend_elixir",
+  password: "postgres_p0p",
   hostname: "localhost",
   database: "tunez_dev",
   stacktrace: true,
