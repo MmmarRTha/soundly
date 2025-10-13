@@ -22,7 +22,6 @@ defmodule Tunez.Music.Album do
     end
   end
 
-
   attributes do
     uuid_primary_key :id
 
