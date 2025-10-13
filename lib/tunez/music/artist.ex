@@ -39,5 +39,9 @@ defmodule Tunez.Music.Artist do
 
       destroy :destroy
     end
+
+    relationships do
+      has_many :albums, Tunez.Music.Album
+    end
   end
 end
