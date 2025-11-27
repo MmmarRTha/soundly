@@ -7,8 +7,8 @@ config :ash, policies: [show_policy_breakdowns?: true], disable_async?: true
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :tunez, Tunez.Repo,
-  username: "backend_elixir",
-  password: "postgres_p0p",
+  username: "martha_backend",
+  password: "postgres_dev",
   hostname: "localhost",
   database: "tunez_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
