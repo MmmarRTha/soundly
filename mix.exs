@@ -4,8 +4,8 @@ defmodule Tunez.MixProject do
   def project do
     [
       app: :tunez,
-      version: "0.1.0",
-      elixir: "~> 1.14",
+      version: "0.1.1",
+      elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       consolidate_protocols: Mix.env() != :dev,
@@ -34,21 +34,19 @@ defmodule Tunez.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:ash_postgres, "~> 2.0"},
+      {:ash_postgres, "~> 2.6.26"},
       {:sourceror, "~> 1.10", only: [:dev, :test]},
-      {:ash, "~> 3.0"},
-      {:phoenix, "~> 1.8.1"},
-      {:phoenix_ecto, "~> 4.5"},
-      {:ecto_sql, "~> 3.10"},
+      {:ash, "~> 3.10.0"},
+      {:phoenix, "~> 1.8.2"},
+      {:phoenix_ecto, "~> 4.7.0"},
+      {:ecto_sql, "~> 3.13.2"},
       {:postgrex, ">=  0.21.1"},
       {:phoenix_html, "~>  4.3.0"},
       {:phoenix_live_reload, "~> 1.6.1", only: :dev},
-      {:phoenix_live_view, "~> 1.1.13"},
-      # Floki 0.38 not compatible with PhoenixTest https://github.com/germsvel/phoenix_test/issues/223
-      {:floki, "~> 0.38.0", only: :test},
+      {:phoenix_live_view, "~> 1.1.18"},
       {:phoenix_live_dashboard, "~> 0.8.3"},
-      {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
-      {:tailwind, "~> 0.4.0", runtime: Mix.env() == :dev},
+      {:esbuild, "~> 0.10.0", runtime: Mix.env() == :dev},
+      {:tailwind, "~> 0.4.1", runtime: Mix.env() == :dev},
       {:heroicons,
        github: "tailwindlabs/heroicons",
        tag: "v2.1.1",
@@ -57,15 +55,16 @@ defmodule Tunez.MixProject do
        compile: false,
        depth: 1},
       {:swoosh, "~> 1.19.8"},
-      {:req, "~> 0.5"},
-      {:telemetry_metrics, "~> 1.0"},
-      {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 1.0.0"},
-      {:jason, "~> 1.2"},
+      {:req, "~> 0.5.16"},
+      {:telemetry_metrics, "~> 1.1.0"},
+      {:telemetry_poller, "~> 1.3.0"},
+      {:gettext, "~> 1.0.2"},
+      {:jason, "~> 1.4.4"},
       {:dns_cluster, "~> 0.2"},
       {:bandit, "~> 1.8.0"},
-      {:igniter, "~> 0.3", only: [:dev]},
-      {:phoenix_test, "~> 0.8.1", only: :test, runtime: false}
+      {:igniter, "~> 0.7.0", only: [:dev]},
+      {:phoenix_test, "~> 0.9.1", only: :test, runtime: false},
+      {:lazy_html, "~> 0.1.8"}
     ]
   end
 
